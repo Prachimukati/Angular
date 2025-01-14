@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<h1 align="center" style="margin-bottom: -15; color: navy;">User List</h1>
+<table border="1" style="width: 100%; border: groove;">
+    <tr>
+        <th width="5%">Select</th>
+        <th width="5%">ID</th>
+        <th width="5%">Image</th>
+        <th width="13%">FirstName</th>
+        <th width="13%">LastName</th>
+        <th width="13%">LoginId</th>
+        <th width="13%">Password</th>
+        <th width="13%">DOB</th>
+        <th width="13%">Role</th>
+        <th>Edit</th>
+    </tr>
+
+    <tr *ngFor="let m of form.list">
+        <td style="text-align: center;">
+            <input type="checkbox" />
+        </td>
+        <td style="text-align: center;">{{m.id}}</td>
+        <td><img src="http://localhost:8080/User/profilePic/{{m.id}}" height="50px" width="80px"></td>
+        <td style="text-align: center;">{{m.firstName}}</td>
+        <td style="text-align: center;">{{m.lastName}}</td>
+        <td style="text-align: center;">{{m.loginId}}</td>
+        <td style="text-align: center;">{{m.password}}</td>
+        <td style="text-align: center;">{{m.dob | date:'dd-MM-yyy'}}</td>
+        <td style="text-align: center;">{{m.roleName}}</td>
+        <td style="text-align: center;"><a href="#">edit</a></td>
+
+    </tr>
+
+
+
+</table>

@@ -1,0 +1,60 @@
+<div align="center">
+
+    <font color="navy">
+        <h1>AddUser</h1>
+    </font>
+
+    <h3>
+        <font color="green">{{form.message}}</font>
+    </h3>
+    <table>
+        <tr>
+            <th>FirstName :</th>
+            <td><input type="text" name="firstName" [(ngModel)]="form.data.firstName" /></td>
+            <td *ngIf="form.inputerror.firstName != null " style="position: fixed;">
+                <font color="red">{{form.inputerror.firstName}}</font>
+            </td>
+        </tr>
+        <tr>
+            <th>LastName :</th>
+            <td><input type="text" name="lastName" [(ngModel)]="form.data.lastName" /></td>
+            <td *ngIf="form.inputerror.lastName != null " style="position: fixed;">
+                <font color="red">{{form.inputerror.lastName}}</font>
+            </td>
+        </tr>
+        <tr>
+            <th>LoginId :</th>
+            <td><input type="text" name="loginId" [(ngModel)]="form.data.loginId" /></td>
+            <td *ngIf="form.inputerror.loginId != null " style="position: fixed;">
+                <font color="red">{{form.inputerror.loginId}}</font>
+            </td>
+        </tr>
+        <tr>
+            <th>Password :</th>
+            <td><input type="text" name="password" [(ngModel)]="form.data.password" /></td>
+            <td *ngIf="form.inputerror.password != null " style="position: fixed;">
+                <font color="red">{{form.inputerror.password}}</font>
+            </td>
+        </tr>
+        <tr>
+            <th>DOB :</th>
+            <td><input type="text" name="dob" [(ngModel)]="form.data.dob" /></td>
+            <td *ngIf="form.inputerror.dob != null " style="position: fixed;">
+                <font color="red">{{form.inputerror.dob}}</font>
+            </td>
+        </tr>
+        <tr>
+            <th>Role :</th>
+            <td><input type="text" name="roleId" [(ngModel)]="form.data.roleId" /></td>
+            <td *ngIf="form.inputerror.roleId != null " style="position: fixed;">
+                <font color="red">{{form.inputerror.roleId}}</font>
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>
+                <button (click)="save()">save</button> &nbsp; <button (click)="cancel()">cancel</button>
+            </td>
+        </tr>
+    </table>
+</div>
